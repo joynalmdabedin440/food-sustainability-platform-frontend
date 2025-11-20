@@ -1,5 +1,9 @@
-import { Leaf } from 'lucide-react';
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Leaf } from 'lucide-react';
+import Card from '../../components/ui/Card';
+import Button from '../../components/ui/Button';
+import InputField from '../../components/ui/InputField';
 
 const LoginPage = ({ onLogin, onNavigate }) => {
   const [email, setEmail] = useState('');
@@ -14,7 +18,7 @@ const LoginPage = ({ onLogin, onNavigate }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen flex items-center justify-center p-4"
+      className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-green-50 to-blue-50"
     >
       <Card className="w-full max-w-md">
         <div className="text-center mb-8">
