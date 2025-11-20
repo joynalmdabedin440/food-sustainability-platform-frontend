@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Package, ClipboardList, BookOpen, User, Upload, LogOut, Menu, X, Leaf, LayoutDashboard } from 'lucide-react';
 
-const Navbar = ({ user, onNavigate, onLogout, mobileMenuOpen, setMobileMenuOpen }) => {
+const Navbar = ({ onNavigate, onLogout, mobileMenuOpen, setMobileMenuOpen }) => {
     const navItems = [
     { id: 'home', label: 'Home', icon: Home },
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
