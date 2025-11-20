@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Navbar from './components/layout/Navbar';
+import Navbar from './components/ui/layout/Navbar';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
@@ -9,6 +9,7 @@ import LogsPage from './pages/LogsPage';
 import ResourcesPage from './pages/ResourcesPage';
 import ProfilePage from './pages/ProfilePage';
 import UploadPage from './pages/UploadPage';
+import Home from './pages/Home';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('login');
@@ -51,7 +52,9 @@ const App = () => {
             setMobileMenuOpen={setMobileMenuOpen} 
           />
           <main className="flex-1 overflow-y-auto">
-            <AnimatePresence mode="wait">
+              <AnimatePresence mode="wait">
+                
+              {currentPage === 'home' && <Home key="home" />}
               {currentPage === 'dashboard' && <DashboardPage key="dashboard" />}
               {currentPage === 'inventory' && <InventoryPage key="inventory" />}
               {currentPage === 'logs' && <LogsPage key="logs" />}
